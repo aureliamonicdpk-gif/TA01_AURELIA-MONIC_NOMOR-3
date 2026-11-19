@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Search Data Mahasiswa</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 30px 16px;
+            color: #263238;
+        }
+
+        .container {
+            max-width: 620px;
+            margin: 0 auto;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            margin-top: 0;
+            text-align: center;
+            color: #263b59;
+        }
+
+        .description {
+            color: #5f6b76;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 16px 0 10px;
+            border: 1px solid #cbd2d9;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: 2px solid #9bb9dc;
+            border-color: #527da8;
+        }
+
+        #resultInfo {
+            color: #526170;
+            font-size: 14px;
+        }
+
+        #studentList {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0 0;
+        }
+
+        #studentList li {
+            padding: 13px;
+            margin-bottom: 10px;
+            background: #eef3f8;
+            border-radius: 6px;
+        }
+
+        #studentList h3 {
+            margin: 0 0 5px;
+            color: #263b59;
+            font-size: 16px;
+        }
+
+        #studentList p {
+            margin: 0;
+            color: #5f6b76;
+            font-size: 14px;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Daftar Mahasiswa</h1>
+        <p class="description">
+            Ketik nama atau jurusan untuk mencari data mahasiswa.
+        </p>
+
+        <label for="searchInput">Pencarian</label>
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Contoh: Andi atau Sistem Informasi"
+            autocomplete="off"
+        >
+
+        <p id="resultInfo" aria-live="polite"></p>
+        <ul id="studentList" aria-live="polite"></ul>
+    </main>
+</body>
+</html>
